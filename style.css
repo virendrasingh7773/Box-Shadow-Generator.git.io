@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    background-color: #b2b2b250;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vmin;
+    /* height: 85%; */
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(2, 42, 83, 0.2);
+}
+
+.result {
+    padding: 25px 0;
+}
+
+#element {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background-color: #0075ff;
+    margin: auto;
+}
+
+.sliders {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    gap: 20px 15px;
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+input[type='color']{
+    margin-top: px;
+}
+input[type='range'] {
+    width: 100%;
+    accent-color:#a1a1a1;
+    mix-blend-mode: color-dodge;
+    -webkit-appearance: none;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.code-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.code-wrapper button {
+    background-color: #0075ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#code {
+    border: 1px solid #dadada;
+    padding: 10PX;
+    font-size: 13px;
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid #25D366;
+    padding: 5px;
+    position: relative;
+    width: 6.2em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+button p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #25D366;
+}
+
+button .copy {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    display: none;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff;
+    font-size: 19px;
+}
+
+button:hover p {
+    left: 0.5em !important;
+    color: #fff !important;
+}
+
+button:hover .copy {
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #25D366 !important;
+}
+/* check----tick----css */
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.terms-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.terms-label .label-text {
+    margin-left: 10px;
+}
+
+.checkbox-svg {
+    width: 30px;
+    height: 30px;
+}
+
+.checkbox-box {
+    fill: rgba(207, 205, 205, 0.425);
+    stroke: #0075ff;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-tick {
+    stroke: #0075ff;
+    stroke-dasharray: 172;
+    stroke-dashoffset: 172;
+    transition: stroke-dashoffset 0.6s ease-in;
+}
+
+input[type="checkbox"]:checked+.terms-label .checkbox-box,
+input[type="checkbox"]:checked+.terms-label .checkbox-tick {
+    stroke-dashoffset: 0;
+}
+
+/* copy */
+.icon-conatiner {
+     border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 15px 0 #ababab4d;
+    cursor: pointer;
+  }
+  
+  .icon-conatiner svg {
+    width: 30px;
+    height: auto;
+  }
+  
+  .icon-conatiner svg:last-child {
+    position: absolute;
+  }
+  
+  .icon-conatiner:active {
+    animation: press 0.2s 1 linear;
+  }
+  
+  .icon-conatiner:active svg:last-child {
+    animation: bounce 0.2s 1 linear;
+  }
+  
+  
+  @keyframes press {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(0.92);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: rotate(5deg) translate(20px, -50px);
+    }
+  
+    to {
+      transform: scale(0.9) rotate(10deg) translate(50px, -80px);
+      opacity: 0;
+    }
+  }
+  
